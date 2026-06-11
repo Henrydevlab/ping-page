@@ -2,31 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Frontend Mentor | Ping Coming Soon Page</title>
+  <meta name="description" content="Ping is launching soon! Subscribe to our newsletter and get notified as soon as we go live.">
+  <meta name="author" content="Henry (@henrydevlab)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="#">
+  <meta property="og:title" content="Frontend Mentor | Ping Coming Soon Page">
+  <meta property="og:description" content="Ping is launching soon! Subscribe to our newsletter and get notified as soon as we go live.">
+  <meta property="og:image" content="#">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="#>
+  <meta property="twitter:title" content="Frontend Mentor | Ping Coming Soon Page">
+  <meta property="twitter:description" content="Ping is launching soon! Subscribe to our newsletter and get notified as soon as we go live.">
+  <meta property="twitter:image" content="#">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
   
-  <title>Frontend Mentor | Ping coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  We are launching soon!
+  <main class="page-wrapper">
+    <header class="header">
+      <img src="./images/logo.svg" alt="Ping Logo" class="header__logo" width="86" height="26">
+    </header>
 
-  Subscribe and get notified
+    <section class="hero-section">
+      <h1 class="hero-section__title">We are launching <span class="hero-section__title--bold">soon!</span></h1>
+      <p class="hero-section__subtitle">Subscribe and get notified</p>
+      
+      <form class="notify-form" id="notifyForm" novalidate>
+        <div class="notify-form__input-group">
+          <input 
+            type="email" 
+            id="emailInput" 
+            class="notify-form__input" 
+            placeholder="Your email address..." 
+            aria-label="Email address for notification updates"
+            aria-describedby="emailError"
+          >
+          <p class="notify-form__error" id="emailError" aria-live="assertive" role="alert"></p>
+        </div>
+        <button type="submit" class="notify-form__btn">Notify Me</button>
+      </form>
+    </section>
 
-  Notify Me
+    <div class="dashboard-preview">
+      <img src="./images/illustration-dashboard.png" alt="Graphical preview interface of the Ping analytical dashboard app" class="dashboard-preview__img" width="640" height="383">
+    </div>
 
-  &copy; Copyright Ping. All rights reserved.
-
-      <footer class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+    <footer class="footer">
+      <nav class="footer__socials" aria-label="Social Media Links">
+        <a href="#" class="footer__social-link" aria-label="Visit our Facebook page"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+        <a href="#" class="footer__social-link" aria-label="Visit our Twitter profile"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" class="footer__social-link" aria-label="Visit our Instagram feed"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+      </nav>
+      <p class="footer__copyright">&copy; Copyright Ping. All rights reserved.</p>
+      
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/henrydevlab" target="_blank" rel="noopener">@henrydevlab</a>.
+      </div>
     </footer>
+  </main>
+
+  <script src="main.js"></script>
 </body>
 </html>
